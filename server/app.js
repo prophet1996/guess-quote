@@ -5,8 +5,15 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 
 const app = express()
+
 const indexRoutes = require('./api/routes/')
 // TODO: connect to database
+
+
+// connect to local mongoDB
+mongoose.connect('mongodb://localhost/guess-quote');
+mongoose.Promise = global.Promise
+
 
 app.use(cors())
 app.use(morgan('dev'))
