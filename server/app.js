@@ -5,9 +5,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 
 const app = express()
-
-const userRoutes = require('./api/routes/user')
-
+const indexRoutes = require('./api/routes/')
 // TODO: connect to database
 
 app.use(cors())
@@ -16,7 +14,9 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 // routes
-app.use('/user', userRoutes)
+
+// index route
+app.use('/', indexRoutes)
 
 // error handling
 app.use((req, res, next) => {
