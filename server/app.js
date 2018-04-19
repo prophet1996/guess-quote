@@ -6,7 +6,7 @@ const mongoose = require('mongoose')
 
 const app = express()
 
-const userRoutes = require('./api/routes/user')
+const indexRoutes = require('./api/routes/')
 
 // connect to local mongoDB
 mongoose.connect('mongodb://localhost/guess-quote');
@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 // routes
-app.use('/user', userRoutes)
+app.use('/', indexRoutes)
 
 // error handling
 app.use((req, res, next) => {
