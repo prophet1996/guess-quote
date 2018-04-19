@@ -13,9 +13,6 @@
 }
 
 .NotFound .text {
-    color: #7d7d7d;
+    color: #aaa;
     text-shadow: 0 1px #fff;
-}
-a{
-    text-decoration: none;
 }
