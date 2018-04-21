@@ -10,6 +10,7 @@ const NotFound = () => (
       but not here this is a 404 <br />
     </p>
     <a href="/">GO BACK!</a>
+
   </div>
 );
 
